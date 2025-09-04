@@ -34,3 +34,7 @@ jobs:
       run: npm run build 
     - name: Run component tests
       run: npm test
+    - name: Run the app
+      run: |
+        npm start &
+        npx wait-on --timeout 60000
